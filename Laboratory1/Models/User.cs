@@ -67,7 +67,7 @@ namespace Laboratory1.Models
                     return 0;
                 return -1;
             }
-            if (DateTime.Today.Month >= DateOfBirth.Month && DateTime.Today.Day >= DateOfBirth.Day)
+            if (DateTime.Today.Month > DateOfBirth.Month || (DateTime.Today.Month == DateOfBirth.Month && DateTime.Today.Day >= DateOfBirth.Day))
                 return DateTime.Today.Year - DateOfBirth.Year;
             return DateTime.Today.Year - DateOfBirth.Year - 1;
         }
