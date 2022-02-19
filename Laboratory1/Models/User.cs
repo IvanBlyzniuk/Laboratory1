@@ -61,6 +61,12 @@ namespace Laboratory1.Models
 
         public int Age()
         {
+            if(DateTime.Today.Year == DateOfBirth.Year)
+            {
+                if (DateTime.Today.Month > DateOfBirth.Month || (DateTime.Today.Month == DateOfBirth.Month && DateTime.Today.Day >= DateOfBirth.Day))
+                    return 0;
+                return -1;
+            }
             if (DateTime.Today.Month >= DateOfBirth.Month && DateTime.Today.Day >= DateOfBirth.Day)
                 return DateTime.Today.Year - DateOfBirth.Year;
             return DateTime.Today.Year - DateOfBirth.Year - 1;
