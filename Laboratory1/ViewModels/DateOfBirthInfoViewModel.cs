@@ -18,7 +18,7 @@ namespace Laboratory1.ViewModels
         {
             get
             {
-                return acceptCommand ?? (acceptCommand = new RelayCommand<object>(o => Accept()));
+                return acceptCommand ??= new RelayCommand<object>(o => Accept());
             }
         }
 
@@ -34,7 +34,7 @@ namespace Laboratory1.ViewModels
             set
             {
                 westernZodiac = value;
-                OnPropertyChanged(nameof(WesternZodiac));
+                OnPropertyChanged();
             }
         }
         private string chineseZodiac;
@@ -47,7 +47,7 @@ namespace Laboratory1.ViewModels
             set
             {
                 chineseZodiac = value;
-                OnPropertyChanged(nameof(ChineseZodiac));
+                OnPropertyChanged();
             }
         }
 
@@ -61,7 +61,7 @@ namespace Laboratory1.ViewModels
             set
             {
                 ageMessage = value;
-                OnPropertyChanged(nameof(AgeMessage));
+                OnPropertyChanged();
             }
         }
 

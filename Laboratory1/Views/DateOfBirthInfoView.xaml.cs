@@ -1,5 +1,4 @@
-﻿using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using Laboratory1.ViewModels;
 namespace Laboratory1.Views
 {
@@ -8,11 +7,10 @@ namespace Laboratory1.Views
     /// </summary>
     public partial class DateOfBirthInfoView : UserControl
     {
-        private DateOfBirthInfoViewModel viewModel;
         public DateOfBirthInfoView()
         {
             InitializeComponent();
-            DataContext = viewModel = new DateOfBirthInfoViewModel();
+            DataContext = new DateOfBirthInfoViewModel();
         }
     }
 }
